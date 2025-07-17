@@ -1,3 +1,6 @@
+
+xxx/
+
 # Bytecode
 __pycache__/
 *.py[cod]
@@ -21,6 +24,7 @@ venv/
 dist/
 build/
 labfiles/chat-app/python/labenv/
+labfiles\chat-app\python\labenv
 
 # Sensitive configs
 .env
