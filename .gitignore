@@ -1,0 +1,27 @@
+# Bytecode
+__pycache__/
+*.py[cod]
+
+# Virtual environment
+venv/
+.env/
+
+# VS Code settings
+.vscode/
+
+# Mac system files
+.DS_Store
+
+# Logs and temporary files
+*.log
+*.tmp
+
+# Python environment
+*.egg-info/
+dist/
+build/
+labfiles/chat-app/python/labenv/
+
+# Sensitive configs
+.env
+
