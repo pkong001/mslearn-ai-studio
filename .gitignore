@@ -1,5 +1,6 @@
 
 xxx/
+labfiles/pongpisut-test/pongpisuttestenv/
 
 # Bytecode
 __pycache__/
@@ -25,6 +26,8 @@ dist/
 build/
 labfiles/chat-app/python/labenv/
 labfiles\chat-app\python\labenv
+
+labfiles/rag-app/python/labenvrag/
 
 # Sensitive configs
 .env
