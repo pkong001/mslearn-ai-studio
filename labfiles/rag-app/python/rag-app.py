@@ -16,15 +16,18 @@ def main():
         search_url = os.getenv("SEARCH_ENDPOINT")
         search_key = os.getenv("SEARCH_KEY")
         index_name = os.getenv("INDEX_NAME")
+        print(f"open_ai_endpoint:\n{open_ai_endpoint}\nopen_ai_key:\n{open_ai_key}\nchat_model:\n{chat_model}\nembedding_model:\n{embedding_model}\nsearch_url:\n{search_url}\nsearch_key:\n{search_key}\nindex_name:\n{index_name}")
 
 
         # Get an Azure OpenAI chat client
+
         chat_client = AzureOpenAI(
-            api_version = "2024-12-01-preview",
+            api_version = "2024-10-21",
             azure_endpoint = open_ai_endpoint,
             api_key = open_ai_key
         )
-
+        # (api_version="2024-10-21")
+        # api_version = "2024-12-01-preview",
 
         # Initialize prompt with system message
         prompt = [
@@ -69,11 +72,13 @@ def main():
             }
 
             # Submit the prompt with the data source options and display the response
+            print(f"chat_model: {chat_model}, \n prompt: {prompt}, \n rag_params: {rag_params}")
             response = chat_client.chat.completions.create(
                 model=chat_model,
                 messages=prompt,
                 extra_body=rag_params
             )
+            print("")
             completion = response.choices[0].message.content
             print(completion)
 

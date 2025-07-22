@@ -1,0 +1,1 @@
+pip install -r requirementschat-app.txt azure-identity azure-ai-projects openai
